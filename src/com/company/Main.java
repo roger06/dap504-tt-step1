@@ -1,39 +1,58 @@
 package com.company;
 
+import java.util.Random;
+
 public class Main {
 
+
     public static void main(String[] args) {
-	// write your code here
+        // write your code here
+
+        int numberOfPlayers = 8;
 
         // tournament of 4 players
 
         // create a player object to test.
 
-        Player player1 = new Player("John", "Smith");
-        Player player2 = new Player("Fred", "Brown");
-
-        System.out.println("Player 1 is: " + player1.firstName + " " + player1.lastName);
-
         // create and array of 4 player objects
-         Player playerArray[] = new Player[2];
-         
-         playerArray[0] = player1;
-         playerArray[1] = player2;
+        Player playerArray[] = new Player[numberOfPlayers];
 
 
-        for (Player thePlayer: playerArray ) {
+//        create array of Player objects
+        for (int i = 0; i < numberOfPlayers; i++) {
 
-            System.out.println(thePlayer.firstName + " " + thePlayer.lastName);
+            int x = i + 1;
+            String firstName = "Player" + x;
+            String lastName = "Surname" + x;
+
+            playerArray[i] = new Player(firstName, lastName, 0);
+
+        }
+
+//        display details of all player objects in array.
+        for (Player thePlayer : playerArray) {
+//            System.out.println(thePlayer.firstName + " " + thePlayer.lastName + " " + thePlayer.age);
+
+            Random rAge = new Random();
+
+
+
+
+            thePlayer.age = rAge.nextInt(80);
+
+            System.out.println(thePlayer.firstName + " " + thePlayer.lastName + " " + thePlayer.age);
+
+
         } // end foreach
-         
 
 
         // echo out all the details.
 
 
-
-
-
+        //
+//        Player player2 = new Player("Fred", "Brown");
+//
+//        System.out.println("Player 1 is: " + player1.firstName + " " + player1.lastName);
 
 
     }
