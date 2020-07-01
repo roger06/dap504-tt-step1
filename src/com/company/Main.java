@@ -10,10 +10,6 @@ public class Main {
 
         int numberOfPlayers = 8;
 
-        // tournament of 4 players
-
-        // create a player object to test.
-
         // create and array of 4 player objects
         Player playerArray[] = new Player[numberOfPlayers];
 
@@ -31,12 +27,8 @@ public class Main {
 
 //        display details of all player objects in array.
         for (Player thePlayer : playerArray) {
-//            System.out.println(thePlayer.firstName + " " + thePlayer.lastName + " " + thePlayer.age);
 
             Random rAge = new Random();
-
-
-
 
             thePlayer.age = rAge.nextInt(80);
 
@@ -46,13 +38,6 @@ public class Main {
         } // end foreach
 
 
-        // echo out all the details.
-
-
-        //
-//        Player player2 = new Player("Fred", "Brown");
-//
-//        System.out.println("Player 1 is: " + player1.firstName + " " + player1.lastName);
 
 
     }
